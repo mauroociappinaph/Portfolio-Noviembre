@@ -1,9 +1,9 @@
-import React from "react";
+import Logo from "../../src/asset/logo/Logo.png";
 
 const Nav = () => {
   return (
     <nav className="flex items-center justify-between p-4 bg-primary">
-      <img src="assets/image/navbar-logo.png" alt="Logo" />
+      <img src={Logo} alt="Logo" className="w-auto h-28" /> {/* Ajusta el tamaño del logo */}
       <a
         href="ruta-de-descarga-de-CV.pdf"
         download
