@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-primary py-16 px-4 sm:px-6 lg:px-8 relative">
+    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-screen-xl mx-auto relative z-10">
         <div className="lg:flex lg:items-center lg:justify-between flex-wrap">
           <div className="w-full lg:w-1/2 min-w-0 mb-6 lg:mb-0">
@@ -38,10 +38,11 @@ const Hero = () => {
               animate={controls}
               variants={headerVariants}
             >
-              <motion.div className="text-white text-4xl font-extrabold sm:text-5xl md:text-6xl">
-                Mauro José Ciappina
+              <motion.div className="text-white text-4xl  sm:text-5xl md:text-6xl">
+                Mauro José <br />
+                <span className=" font-extrabold text-7xl">Ciappina</span>
               </motion.div>
-              <motion.div className="text-white text-lg sm:text-xl md:text-2xl">
+              <motion.div className="text-white text-lg sm:text-xl md:text-2xl my-4">
                 Full Stack Developer
               </motion.div>
             </motion.div>

@@ -31,7 +31,7 @@ const projectsData = [
 
 const Proyectos = () => {
   return (
-    <div className="bg-primary py-16 px-4 sm:px-6 lg:px-8 relative">
+    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative">
       {/* Agregar fondo semi-transparente */}
       <div
         className="absolute inset-0 z-0"

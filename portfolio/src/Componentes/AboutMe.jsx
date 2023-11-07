@@ -19,7 +19,7 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="bg-secondary py-16 px-4 sm:px-6 lg:px-8">
+    <section className=" py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-screen-xl mx-auto">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex-1 min-w-0">
