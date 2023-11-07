@@ -89,7 +89,7 @@ const Hero = () => {
           </div>
 
           {/* Aquí se agrega la imagen a la derecha */}
-          <div className="flex-1 hidden lg:block">
+          <div className="flex-1 hidden lg:flex justify-center items-center">
             <img src="assets/image/home-img.png" alt="Image" />
           </div>
         </div>

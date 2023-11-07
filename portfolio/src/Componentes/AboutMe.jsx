@@ -21,33 +21,35 @@ const AboutMe = () => {
   };
 
   return (
-    <section className="bg-secondary py-8 px-4 sm:py-16 sm:px-6 lg:px-8 xl:px-0 max-w-screen-xl mx-auto">
-      <div className="lg:flex lg:items-center lg:justify-between">
-        <div className="flex-1 min-w-0">
-          <motion.div
-            className="mb-4"
-            initial="hidden"
-            animate={controls}
-            variants={textVariants}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
-              <div>
-                <motion.h2 className="text-white text-2xl md:text-4xl font-semibold">
-                  Acerca de Mí
-                </motion.h2>
+    <section className="bg-secondary py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-screen-xl mx-auto">
+        <div className="lg:flex lg:items-center lg:justify-between">
+          <div className="flex-1 min-w-0">
+            <motion.div
+              className="mb-4"
+              initial="hidden"
+              animate={controls}
+              variants={textVariants}
+            >
+              <div className="grid grid-cols-2 gap-8">
+                <div>
+                  <motion.h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold">
+                    Acerca de Mí
+                  </motion.h2>
+                </div>
+                <div>
+                  <motion.p className="text-white text-lg sm:text-xl md:text-2xl">
+                    Soy Mauro Ciappina, un comunicador audiovisual y desarrollador
+                    full stack de Mar del Plata. Mi pasión por la creación visual y
+                    la tecnología me ha llevado a explorar el mundo del desarrollo
+                    web y móvil. Mi objetivo es combinar mis habilidades de
+                    comunicación con la programación para crear experiencias
+                    digitales sorprendentes.
+                  </motion.p>
+                </div>
               </div>
-              <div>
-                <motion.p className="text-white text-base md:text-lg">
-                  Soy Mauro Ciappina, un comunicador audiovisual y desarrollador
-                  full stack de Mar del Plata. Mi pasión por la creación visual y
-                  la tecnología me ha llevado a explorar el mundo del desarrollo
-                  web y móvil. Mi objetivo es combinar mis habilidades de
-                  comunicación con la programación para crear experiencias
-                  digitales sorprendentes.
-                </motion.p>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
