@@ -1,23 +1,20 @@
-import { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion'; // Importa motion de framer-motion
-import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'; // Importa los iconos
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
-  // Control de animación
   const controls = useAnimation();
 
-  // Inicia la animación cuando el componente se monta
   useEffect(() => {
-    controls.start('visible');
+    controls.start("visible");
   }, [controls]);
 
-  // Define las animaciones para los elementos
   const headerVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" }, // Duración y curva de aceleración personalizada
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
@@ -25,22 +22,12 @@ const Hero = () => {
     hidden: { scale: 0 },
     visible: {
       scale: 1,
-      transition: { duration: 0.6, ease: "easeOut" }, // Duración y curva de aceleración personalizada
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   };
 
   return (
     <div className="bg-primary py-16 px-4 sm:px-6 lg:px-8 relative">
-      {/* Agregar fondo */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            "url('https://tenor.com/view/earth-planet-globe-environment-black-and-white-gif-5533046')",
-          backgroundSize: 'cover',
-          filter: 'grayscale(100%)',
-        }}
-      ></div>
       <div className="max-w-screen-xl mx-auto relative z-10">
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className="flex-1 min-w-0">
@@ -73,7 +60,7 @@ const Hero = () => {
                   animate={controls}
                   variants={iconVariants}
                 >
-                  <FaLinkedin size={40} /> {/* Agrega el icono de LinkedIn */}
+                  <FaLinkedin size={40} />
                 </motion.a>
                 <motion.a
                   href="https://github.com/your-github-profile"
@@ -84,7 +71,7 @@ const Hero = () => {
                   animate={controls}
                   variants={iconVariants}
                 >
-                  <FaGithub size={40} /> {/* Agrega el icono de GitHub */}
+                  <FaGithub size={40} />
                 </motion.a>
                 <motion.a
                   href="https://twitter.com/your-twitter-profile"
@@ -95,10 +82,15 @@ const Hero = () => {
                   animate={controls}
                   variants={iconVariants}
                 >
-                  <FaTwitter size={40} /> {/* Agrega el icono de Twitter */}
+                  <FaTwitter size={40} />
                 </motion.a>
               </motion.div>
             </motion.div>
+          </div>
+
+          {/* Aquí se agrega la imagen a la derecha */}
+          <div className="flex-1 hidden lg:block">
+            <img src="assets/image/home-img.png" alt="Image" />
           </div>
         </div>
       </div>
