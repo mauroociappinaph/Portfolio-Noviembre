@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import img1 from "../asset/vecteezy_3d-male-character-engaged-in-work-on-a-laptop_24658981_575.png";
 
 const Hero = () => {
   const controls = useAnimation();
@@ -90,7 +91,7 @@ const Hero = () => {
 
           {/* Aquí se agrega la imagen a la derecha */}
           <div className="flex-1 hidden lg:flex justify-center items-center">
-            <img src="assets/image/home-img.png" alt="Home" />
+            <img src={img1} alt="Home" style={{ width: "75%" }} />
           </div>
         </div>
       </div>
