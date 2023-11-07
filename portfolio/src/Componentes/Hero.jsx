@@ -30,8 +30,8 @@ const Hero = () => {
   return (
     <div className="bg-primary py-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-screen-xl mx-auto relative z-10">
-        <div className="lg:flex lg:items-center lg:justify-between">
-          <div className="flex-1 min-w-0">
+        <div className="lg:flex lg:items-center lg:justify-between flex-wrap">
+          <div className="w-full lg:w-1/2 min-w-0 mb-6 lg:mb-0">
             <motion.div
               className="mb-4"
               initial="hidden"
@@ -90,8 +90,8 @@ const Hero = () => {
           </div>
 
           {/* Aquí se agrega la imagen a la derecha */}
-          <div className="flex-1 hidden lg:flex justify-center items-center">
-            <img src={img1} alt="Home" style={{ width: "75%" }} />
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
+            <img src={img1} alt="Home" className="w-full lg:w-3/4" />
           </div>
         </div>
       </div>
