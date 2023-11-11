@@ -4,14 +4,15 @@ import { motion } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "Proyecto 1",
+    title: "Padel MDQ",
     description: "Descripción del Proyecto 1",
     image: "url_de_la_imagen_1.jpg",
+    deployedUrl: "https://padelmdq.com/",
     technologies: [
-      { name: "Astro.js", color: "bg-fuchsia-400 text-fuchsia-900" },
-      { name: "Web design", color: "bg-lime-400 text-lime-900" },
+      { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
+      //{ name: "Web design", color: "bg-lime-400 text-lime-900" },
       { name: "Tailwind.css", color: "bg-sky-400 text-sky-900" },
-      { name: "TypeScript", color: "bg-rose-400 text-rose-900" },
+      // { name: "TypeScript", color: "bg-rose-400 text-rose-900" },
     ],
   },
   {
@@ -31,7 +32,7 @@ const projectsData = [
 
 const Proyectos = () => {
   return (
-    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative">
+    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative  bg-secondary bg-opacity-75 ">
       {/* Agregar fondo semi-transparente */}
       <div
         className="absolute inset-0 z-0"
@@ -66,6 +67,14 @@ const Proyectos = () => {
               <h2 className="text-lg font-semibold">{project.title}</h2>
               <p className="text-gray-700">
                 {project.description}
+                <a
+                  href={project.deployedUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline block mt-2"
+                >
+                  Ver proyecto
+                </a>
 
                 {/* Agregar el div con las tecnologías */}
                 <div className="flex flex-col items-center gap-y-2 md:flex-row">

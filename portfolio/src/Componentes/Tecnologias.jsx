@@ -23,7 +23,7 @@ const Technologies = () => {
   ];
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
+    <div className="p-4 sm:p-6 lg:p-8 bg-secondary bg-opacity-75">
       <h1 className="text-4xl font-semibold text-center mb-4 text-white">Tecnologías</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
         {technologies.map((tech, index) => (
