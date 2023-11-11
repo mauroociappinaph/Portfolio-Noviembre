@@ -1,13 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import PokemonApi from "../asset/Proyectos/ApiPokemon.png";
+import Cotizador from "../asset/Proyectos/Cotizador.png";
+import DealUp from "../asset/Proyectos/DealUp.png";
+
 const projectsData = [
+  {
+    id: 4,
+    title: "Deal Up!",
+    description: "",
+    image: DealUp,
+    deployedUrl: "https://start-bussines-n21ptnn46-adielhdz.vercel.app/",
+    technologies: [
+      { name: "NextJS", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "Sequelize", color: "bg-lime-400 text-lime-900" },
+      { name: "Tailwind.css", color: "bg-sky-400 text-sky-900" },
+      { name: "JavaScript", color: "bg-rose-400 text-rose-900" },
+      { name: "Postman", color: "bg-yellow-400 text-fuchsia-900" },
+    ],
+  },
   {
     id: 1,
     title: "Padel MDQ",
     description: "Descripción del Proyecto 1",
     image: "url_de_la_imagen_1.jpg",
-    deployedUrl: "https://padelmdq.com/",
+    deployedUrl: "https://www.padelmdq.com.ar",
     technologies: [
       { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
       //{ name: "Web design", color: "bg-lime-400 text-lime-900" },
@@ -17,17 +35,29 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Proyecto 2",
-    description: "Descripción del Proyecto 2",
-    image: "url_de_la_imagen_2.jpg",
+    title: "Pokedex",
+    description: "Pokedex consumiendo los datos de la API de Pokemon.",
+    image: PokemonApi,
     technologies: [
       { name: "React", color: "bg-rose-400 text-rose-900" },
-      { name: "Node.js", color: "bg-fuchsia-400 text-fuchsia-900" },
-      { name: "Express", color: "bg-lime-400 text-lime-900" },
-      { name: "MongoDB", color: "bg-sky-400 text-sky-900" },
+      { name: "Tailwind", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "API", color: "bg-lime-400 text-lime-900" },
+      { name: "TypeScript", color: "bg-sky-400 text-sky-900" },
     ],
   },
   // Agrega más proyectos aquí
+  {
+    id: 3,
+    title: "Cotizador de monedas",
+    description: "Cotizador de convención de monedas.",
+    image: Cotizador,
+    technologies: [
+      { name: "React", color: "bg-rose-400 text-rose-900" },
+      // { name: "API", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
+      { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
+    ],
+  },
 ];
 
 const Proyectos = () => {
@@ -73,15 +103,15 @@ const Proyectos = () => {
                   rel="noopener noreferrer"
                   className="text-blue-500 underline block mt-2"
                 >
-                  Ver proyecto
+                  {project.deployedUrl}
                 </a>
 
                 {/* Agregar el div con las tecnologías */}
-                <div className="flex flex-col items-center gap-y-2 md:flex-row">
+                <div className="grid grid-cols-4 mt-4 items-center justify-center gap-4">
                   {project.technologies.map((technology, index) => (
                     <div
                       key={index}
-                      className={`ml-3 flex gap-2 ${technology.color}`}
+                      className={`flex items-center gap-2 ${technology.color}`}
                     >
                       <div className="rounded-md px-2 py-1 text-xs font-semibold">
                         {technology.name}
