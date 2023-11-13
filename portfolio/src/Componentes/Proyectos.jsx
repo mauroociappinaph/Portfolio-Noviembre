@@ -49,7 +49,7 @@ const projectsData = [
   {
     id: 3,
     title: "Cotizador de monedas",
-    description: "Cotizador de convención de monedas.",
+    description: "Cotizador de conversión de monedas.",
     image: Cotizador,
     technologies: [
       { name: "React", color: "bg-rose-400 text-rose-900" },

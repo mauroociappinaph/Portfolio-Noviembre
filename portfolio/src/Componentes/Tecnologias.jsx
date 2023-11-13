@@ -1,5 +1,5 @@
 import React from "react";
-import { FaJs, FaReact, FaNode, FaHtml5, FaCss3, FaCode, FaServer, FaSitemap, FaCodeBranch, FaDatabase } from "react-icons/fa";
+import { FaJs, FaMobile ,FaReact, FaNode, FaHtml5, FaCss3, FaCode, FaServer, FaSitemap, FaCodeBranch, FaDatabase } from "react-icons/fa";
 
 const TechnologyItem = ({ tech, index }) => (
   <div className="bg-primary p-4 rounded-md text-white text-center flex flex-col items-center justify-center">
@@ -20,6 +20,10 @@ const Technologies = () => {
     { name: "Redux", icon: <FaSitemap /> },
     { name: "Sequelize", icon: <FaCodeBranch /> },
     { name: "MySQL", icon: <FaDatabase /> },
+    { name: "MongoDB", icon: <FaDatabase /> },
+    { name: "Tailwind", icon: <FaSitemap /> },
+    { name: "React Native", icon: <FaMobile /> },
+    
   ];
 
   return (
