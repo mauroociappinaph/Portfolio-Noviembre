@@ -113,7 +113,7 @@ const Proyectos = () => {
                       key={index}
                       className={`flex items-center gap-2 ${technology.color}`}
                     >
-                      <div className="rounded-md px-2 py-1 text-xs font-semibold">
+                      <div className="flex items-center rounded-md px-2 py-1 text-xs font-semibold">
                         {technology.name}
                       </div>
                     </div>
