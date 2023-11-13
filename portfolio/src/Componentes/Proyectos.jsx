@@ -23,14 +23,14 @@ const projectsData = [
   {
     id: 1,
     title: "Padel MDQ",
-    description: "Descripción del Proyecto 1",
+    description: "Sitio Web de que almacena las canchas de padel y facilita el contactarlas.",
     image: "url_de_la_imagen_1.jpg",
     deployedUrl: "https://www.padelmdq.com.ar",
     technologies: [
       { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
       //{ name: "Web design", color: "bg-lime-400 text-lime-900" },
       { name: "Tailwind.css", color: "bg-sky-400 text-sky-900" },
-      // { name: "TypeScript", color: "bg-rose-400 text-rose-900" },
+      { name: "JavaScript", color: "bg-rose-400 text-rose-900" },
     ],
   },
   {
