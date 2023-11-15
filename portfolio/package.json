@@ -14,7 +14,7 @@
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.16",
     "formik": "^2.4.5",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^10.16.4",  
     "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-countup": "^6.5.0",
@@ -32,7 +32,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-
   },
   "eslintConfig": {
     "extends": [
@@ -51,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }

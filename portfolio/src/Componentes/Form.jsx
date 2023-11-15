@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("El nombre es obligatorio"),
@@ -12,11 +13,31 @@ const validationSchema = Yup.object().shape({
 });
 
 const Formulario = () => {
-  const handleSubmit = (values, { setSubmitting }) => {
-    // Aquí puedes manejar el envío del formulario, por ejemplo, realizar una solicitud a un servidor.
-    // Cuando el envío sea exitoso, puedes actualizar el estado o mostrar un mensaje de confirmación.
-    console.log(values);
-    setSubmitting(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    try {
+      setSubmitting(true);
+  
+      const response = await fetch("http://localhost:3001/enviar-correo", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+  
+      const result = await response.json();
+      console.log(result);
+  
+      setSubmitSuccess(true);
+      resetForm();
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
