@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import PokemonApi from "../asset/Proyectos/ApiPokemon.png";
 import Cotizador from "../asset/Proyectos/Cotizador.png";
 import DealUp from "../asset/Proyectos/DealUp.png";
+import PadelMdq from "../asset/Proyectos/PadelMdq.png";
 
 const projectsData = [
   {
@@ -24,7 +25,7 @@ const projectsData = [
     id: 1,
     title: "Padel MDQ",
     description: "Sitio Web de que almacena las canchas de padel y facilita el contactarlas.",
-    image: "url_de_la_imagen_1.jpg",
+    image: PadelMdq,
     deployedUrl: "https://www.padelmdq.com.ar",
     technologies: [
       { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
