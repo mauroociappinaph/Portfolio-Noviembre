@@ -5,6 +5,8 @@ import PokemonApi from "../asset/Proyectos/ApiPokemon.png";
 import Cotizador from "../asset/Proyectos/Cotizador.png";
 import DealUp from "../asset/Proyectos/DealUp.png";
 import PadelMdq from "../asset/Proyectos/PadelMdq.png";
+import CarritoCompra from "../asset/Proyectos/CarritoDeCompra.png";
+import FestivalRock from "../asset/Proyectos/FestivalRock.png";
 
 const projectsData = [
   {
@@ -60,6 +62,32 @@ const projectsData = [
       // { name: "API", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
       { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
+    ],
+  },
+  {
+    id: 5,
+    title: "Carrito de compra",
+    description: "Carrito de compras.",
+    image: CarritoCompra,
+    //deployedUrl: "https://carrito-de-compra.vercel.app/",
+    technologies: [
+      { name: "HTML", color: "bg-rose-400 text-rose-900" },
+      { name: "Tailwind", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
+    ],
+  },
+  {
+    id: 6,
+    title: "Festival Rock",
+    description: "Festival Rock.",
+    image: FestivalRock,
+    deployedUrl: "https://rockfestivalmdp2022.netlify.app/",
+    technologies: [
+      { name: "HTML", color: "bg-rose-400 text-rose-900" },
+      { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "SASS", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
+      { name: "GULP", color: "bg-sky-400 text-sky-900" },
     ],
   },
 ];
