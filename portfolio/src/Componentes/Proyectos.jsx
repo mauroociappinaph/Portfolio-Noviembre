@@ -16,21 +16,24 @@ const projectsData = [
     technologies: [
       { name: "NextJS", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "Sequelize", color: "bg-lime-400 text-lime-900" },
-      { name: "Tailwind.css", color: "bg-sky-400 text-sky-900" },
+      { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
       { name: "JavaScript", color: "bg-rose-400 text-rose-900" },
       { name: "Postman", color: "bg-yellow-400 text-fuchsia-900" },
+      { name: "Node JS", color: "bg-green-400 text-green-900" },
+      { name: "Express", color: "bg-blue-400 text-blue-900" },
     ],
   },
   {
     id: 1,
     title: "Padel MDQ",
-    description: "Sitio Web de que almacena las canchas de padel y facilita el contactarlas.",
+    description:
+      "Sitio Web de que almacena las canchas de padel y facilita el contactarlas.",
     image: PadelMdq,
     deployedUrl: "https://www.padelmdq.com.ar",
     technologies: [
       { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
       //{ name: "Web design", color: "bg-lime-400 text-lime-900" },
-      { name: "Tailwind.css", color: "bg-sky-400 text-sky-900" },
+      { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
       { name: "JavaScript", color: "bg-rose-400 text-rose-900" },
     ],
   },
