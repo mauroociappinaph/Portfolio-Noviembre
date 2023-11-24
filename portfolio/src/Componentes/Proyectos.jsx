@@ -1,12 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import PokemonApi from "../asset/Proyectos/ApiPokemon.png";
-import Cotizador from "../asset/Proyectos/Cotizador.png";
+//import PokemonApi from "../asset/Proyectos/ApiPokemon.png";
+//import Cotizador from "../asset/Proyectos/Cotizador.png";
 import DealUp from "../asset/Proyectos/DealUp.png";
-import PadelMdq from "../asset/Proyectos/PadelMdq.png";
+import PadelMdq from "../asset/Proyectos/padelmdq.png";
 import CarritoCompra from "../asset/Proyectos/CarritoDeCompra.png";
 import FestivalRock from "../asset/Proyectos/FestivalRock.png";
+import Cotizador from "../asset/Proyectos/Cotizador.png";
+import PokemonApi from "../asset/Proyectos/PokemonApi.png"
 
 const projectsData = [
   {
@@ -44,6 +46,7 @@ const projectsData = [
     title: "Pokedex",
     description: "Pokedex consumiendo los datos de la API de Pokemon.",
     image: PokemonApi,
+    deployedUrl: "https://pokedex-typescript-reactmc.netlify.app/",
     technologies: [
       { name: "React", color: "bg-rose-400 text-rose-900" },
       { name: "Tailwind", color: "bg-fuchsia-400 text-fuchsia-900" },
@@ -57,9 +60,10 @@ const projectsData = [
     title: "Cotizador de monedas",
     description: "Cotizador de conversión de monedas.",
     image: Cotizador,
+    deployedUrl: "https://cotizadorbymauroociappina.netlify.app/",
     technologies: [
       { name: "React", color: "bg-rose-400 text-rose-900" },
-      // { name: "API", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "Vite", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
       { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
     ],
@@ -69,7 +73,7 @@ const projectsData = [
     title: "Carrito de compra",
     description: "Carrito de compras.",
     image: CarritoCompra,
-    //deployedUrl: "https://carrito-de-compra.vercel.app/",
+    deployedUrl: "https://carritodecompraciappina.netlify.app/",
     technologies: [
       { name: "HTML", color: "bg-rose-400 text-rose-900" },
       { name: "Tailwind", color: "bg-fuchsia-400 text-fuchsia-900" },
