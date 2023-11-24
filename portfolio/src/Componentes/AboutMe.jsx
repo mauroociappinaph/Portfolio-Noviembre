@@ -16,7 +16,11 @@ const AboutMe = () => {
 
   const textVariants = {
     hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -29,7 +33,6 @@ const AboutMe = () => {
             animate={controls}
             variants={containerVariants}
           >
-           
             <div className="lg:w-1/2">
               <motion.img
                 src={imagen2}
@@ -41,13 +44,23 @@ const AboutMe = () => {
               />
             </div>
             <div className="lg:w-1/2 mb-4 ">
-              <motion.h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold" variants={textVariants}>
+              <motion.h2
+                className="text-white text-3xl sm:text-4xl md:text-5xl font-semibold"
+                variants={textVariants}
+              >
                 Acerca de Mí
               </motion.h2>
-              <motion.p className="text-white text-lg sm:text-xl md:text-2xl mt-4" variants={textVariants}>
-                Soy Mauro Ciappina, un comunicador audiovisual y desarrollador full stack de Mar del Plata. Mi pasión por la
-                creación visual y la tecnología me ha llevado a explorar el mundo del desarrollo web y móvil. Mi objetivo es
-                combinar mis habilidades de comunicación con la programación para crear experiencias digitales sorprendentes.
+              <motion.p
+                className="text-white text-lg sm:text-xl md:text-2xl mt-4"
+                variants={textVariants}
+              >
+                Soy Mauro Ciappina Técnico Universitario en Comunicación
+                Audiovisual y Full Stack Developer. Me describo como una persona
+                autodidacta y siempre buscando mejorar mis habilidades en la
+                programación y personales. Mi objetivo como programador es
+                combinar mi background como comunicador audiovisual con la
+                programación para crear experiencias digitales novedosas y
+                dinámicas.
               </motion.p>
             </div>
           </motion.div>
@@ -58,3 +71,18 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+/*
+Tu background como comunicador audiovisual te da una serie de habilidades que son muy valiosas en el campo de la programación, tanto front-end como back-end. Estas habilidades incluyen:
+
+SKILLS
+
+Creatividad: Como comunicador audiovisuales soy expertos en crear contenido visual y multimedia que sean atractivos. Lo que me permite desarrollo de interfaces de usuario (UI) y experiencias de usuario (UX) efectivas.
+
+Comunicación: Como comunicador audiovisuales soy expertos en comunicar ideas de manera clara y concisa. Esta habilidad es esencial para la documentación de código y la comunicación con otros desarrolladores.
+
+Problema-solving: Como comunicador audiovisual estoy acostumbrados a pensar fuera de la caja y encontrar soluciones creativas a los problemas. Una habilidad la cual aplico para el desarrollo de software eficaz.
+
+SOFT-SKILLS
+
+
+*/
