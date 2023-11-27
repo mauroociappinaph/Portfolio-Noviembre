@@ -76,7 +76,7 @@ const Hero = () => {
                   <FaGithub size={40} />
                 </motion.a>
                 <motion.a
-                  href="https://twitter.com/your-twitter-profile"
+                  href="https://twitter.com/mauroo_jose"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white transition-transform transform hover:scale-110"
