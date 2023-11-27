@@ -12,4 +12,6 @@ Problema-solving: Como comunicador audiovisual estoy acostumbrados a pensar fuer
 SOFT-SKILLS
 
 
+
+
 */

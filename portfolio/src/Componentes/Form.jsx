@@ -4,6 +4,8 @@ import * as Yup from "yup";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+//!SECTION Validación Form con YUP
+
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("El nombre es obligatorio"),
   email: Yup.string()
