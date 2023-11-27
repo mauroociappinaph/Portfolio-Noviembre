@@ -14,7 +14,7 @@ const projectsData = [
   {
     id: 4,
     title: "Deal Up!",
-    description: "",
+    description: "Deal Up es una aplicación Full Stack para conectar emprendedores con inversionistas.",
     image: DealUp,
     deployedUrl: "https://start-bussines-n21ptnn46-adielhdz.vercel.app/",
     technologies: [
@@ -44,7 +44,7 @@ const projectsData = [
   {
     id: 2,
     title: "Pokedex",
-    description: "Pokedex consumiendo los datos de la API de Pokemon.",
+    description: "Pokedex consumiendo los datos de la API de Pokemon. Permite ver todos los pokemones y entrar a los datos específicos de cada pokemon.",
     image: PokemonApi,
     deployedUrl: "https://pokedex-typescript-reactmc.netlify.app/",
     technologies: [
@@ -58,7 +58,7 @@ const projectsData = [
   {
     id: 3,
     title: "Cotizador de monedas",
-    description: "Cotizador de conversión de monedas.",
+    description: "Cotizador de conversión de monedas.Permite calcular el timpo de cambio entre dos tipos de monedas.",
     image: Cotizador,
     deployedUrl: "https://cotizadorbymauroociappina.netlify.app/",
     technologies: [
