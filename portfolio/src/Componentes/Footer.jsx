@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary p-4 text-white text-center">
       <div className="flex justify-center space-x-4">
-        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/maurojoseciappina/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} />
         </a>
         <a href="https://github.com/mauroociappinaph" target="_blank" rel="noopener noreferrer">

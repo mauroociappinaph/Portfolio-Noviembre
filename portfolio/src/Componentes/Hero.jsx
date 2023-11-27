@@ -54,7 +54,7 @@ const Hero = () => {
             >
               <motion.div className="flex space-x-4">
                 <motion.a
-                  href="https://www.linkedin.com/in/your-linkedin-profile"
+                  href="https://www.linkedin.com/in/maurojoseciappina/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white transition-transform transform hover:scale-110"
