@@ -65,7 +65,7 @@ const Hero = () => {
                   <FaLinkedin size={40} />
                 </motion.a>
                 <motion.a
-                  href="https://github.com/your-github-profile"
+                  href="https://github.com/mauroociappinaph"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white transition-transform transform hover:scale-110"

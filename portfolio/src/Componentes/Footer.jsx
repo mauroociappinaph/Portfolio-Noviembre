@@ -8,10 +8,10 @@ const Footer = () => {
         <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={24} />
         </a>
-        <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/mauroociappinaph" target="_blank" rel="noopener noreferrer">
           <FaGithub size={24} />
         </a>
-        <a href="https://twitter.com/your-twitter-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://twitter.com/mauroo_jose" target="_blank" rel="noopener noreferrer">
           <FaTwitter size={24} />
         </a>
       </div>
