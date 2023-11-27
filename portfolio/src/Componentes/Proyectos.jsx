@@ -71,7 +71,7 @@ const projectsData = [
   {
     id: 5,
     title: "Carrito de compra",
-    description: "Carrito de compras.",
+    description: "Una aplicación web que simula un carrito de compras, permitiendo a los usuarios agregar productos y eliminar productos.",
     image: CarritoCompra,
     deployedUrl: "https://carritodecompraciappina.netlify.app/",
     technologies: [
@@ -83,7 +83,7 @@ const projectsData = [
   {
     id: 6,
     title: "Festival Rock",
-    description: "Festival Rock.",
+    description: "Esta aplicación web dedicada a un festival musical. Contiene un Line-up, horarios de concierto y una galeria interactiva de fotos.",
     image: FestivalRock,
     deployedUrl: "https://rockfestivalmdp2022.netlify.app/",
     technologies: [
