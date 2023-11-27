@@ -89,9 +89,9 @@ const projectsData = [
     technologies: [
       { name: "HTML", color: "bg-rose-400 text-rose-900" },
       { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
-      { name: "SASS", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
       { name: "GULP", color: "bg-sky-400 text-sky-900" },
+      { name: "SASS", color: "bg-orange-400 text-orange-900" },
     ],
   },
 ];
