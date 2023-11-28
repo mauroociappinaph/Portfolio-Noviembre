@@ -5,7 +5,7 @@ const Nav = () => {
     <nav className="flex items-center justify-between p-4 bg-primary">
       <img src={Logo} alt="Logo" className="w-auto h-28" /> {/* Ajusta el tamaño del logo */}
       <a
-        href="ruta-de-descarga-de-CV.pdf"
+        href="../asset/cve.pdf"
         download
         className="px-7 py-3 md:px-9 md:py-4 bg-primary font-medium md:font-semibold text-white text-lg uppercase  rounded-md hover:bg-secondary hover:text-white transition ease-linear duration-500 flex items-center"
       >
