@@ -28,7 +28,7 @@ const Hero = () => {
   };
 
   return (
-    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative bg-secondary bg-opacity-75 ">
+    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative bg-secondary  ">
       <div className="max-w-screen-xl mx-auto relative z-10">
         <div className="lg:flex lg:items-center lg:justify-between flex-wrap">
           <div className="w-full lg:w-1/2 min-w-0 mb-6 lg:mb-0">

@@ -98,7 +98,7 @@ const projectsData = [
 
 const Proyectos = () => {
   return (
-    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative  bg-secondary bg-opacity-75 ">
+    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative  bg-secondary  ">
       {/* Agregar fondo semi-transparente */}
       <div
         className="absolute inset-0 z-0"
@@ -111,7 +111,7 @@ const Proyectos = () => {
         }}
       ></div>
       <div className="max-w-screen-xl mx-auto relative z-10">
-        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold text-center">
+        <h1 className="text-white text-5xl sm:text-4xl md:text-5xl font-bold text-center">
           Proyectos
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
