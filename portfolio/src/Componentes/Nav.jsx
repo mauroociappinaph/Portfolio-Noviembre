@@ -1,12 +1,10 @@
 import Logo from "../../src/asset/logo/Logo.png";
 
 const Nav = () => {
-
-const CV = "../asset/cve.pdf"
+  const CV = "../asset/cve.pdf";
 
   return (
     <nav className="flex items-center justify-between p-4 bg-primary">
-      <img src={Logo} alt="Logo" className="w-auto h-28" /> {/* Ajusta el tamaño del logo */}
       <a
         href={CV}
         download
