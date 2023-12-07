@@ -12,7 +12,7 @@ const skills = [
       "Como comunicador audiovisual, soy experto en comunicar ideas de manera clara y concisa. Esta habilidad es esencial para la documentación de código y la comunicación con otros desarrolladores.",
   },
   {
-    title: "Problema-solving",
+    title: "Resolución de Problemas",
     description:
       "Como comunicador audiovisual, estoy acostumbrado a pensar fuera de la caja y encontrar soluciones creativas a los problemas. Aplico esta habilidad para el desarrollo de software eficaz.",
   },
@@ -20,8 +20,8 @@ const skills = [
 
 const Softskills = () => {
   return (
-    <div className="px-3 md:lg:xl:px-20 bg-secondary py-8">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+    <div className="p-4 md:lg:xl:p-8 bg-secondary py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
         <h1 className="text-4xl md:text-5xl lg:text-6xl text-center font-bold text-white mb-6 col-span-3">Soft Skills</h1>
         {skills.map((skill, index) => (
           <div key={index} className="p-4 md:p-6 lg:p-8 flex flex-col items-center text-center bg-white rounded-lg shadow-md mb-4">
