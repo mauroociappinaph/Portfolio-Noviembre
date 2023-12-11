@@ -9,6 +9,8 @@ import CarritoCompra from "../asset/Proyectos/CarritoDeCompra.png";
 import FestivalRock from "../asset/Proyectos/FestivalRock.png";
 import Cotizador from "../asset/Proyectos/Cotizador.png";
 import PokemonApi from "../asset/Proyectos/PokemonApi.png"
+import Coffe from "../asset/Proyectos/Coffe.png"
+import Buffet from "../asset/Proyectos/Buffet.png"
 
 const projectsData = [
   {
@@ -94,6 +96,30 @@ const projectsData = [
       { name: "SASS", color: "bg-orange-400 text-orange-900" },
     ],
   },
+  {
+    id: 7,
+    title: "Buffet",
+    description: "Aplicación web de un restaurante. Contiene menu, fotos y descripción de los productos.",
+    image: Buffet,
+    deployedUrl: "",
+    technologies: [
+      { name: "HTML", color: "bg-rose-400 text-rose-900" },
+      { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
+    ]
+  },
+  {
+    id: 8,
+    title: "Coffe Shop",
+    description: "",
+    image: Coffe,
+    deployedUrl: "https://blogcafeciappina.netlify.app/",
+    technologies: [
+      { name: "HTML", color: "bg-rose-400 text-rose-900" },
+      { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
+    ]
+  }
 ];
 
 const Proyectos = () => {
