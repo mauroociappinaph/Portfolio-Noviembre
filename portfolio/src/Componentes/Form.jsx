@@ -1,4 +1,3 @@
-import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
@@ -14,6 +13,8 @@ const validationSchema = Yup.object().shape({
   message: Yup.string().required("El mensaje es obligatorio"),
 });
 
+
+
 const Formulario = () => {
   const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -21,7 +22,7 @@ const Formulario = () => {
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       setSubmitting(true);
-  
+
       const response = await fetch("http://localhost:3001/enviar-correo", {
         method: "POST",
         headers: {
@@ -29,10 +30,10 @@ const Formulario = () => {
         },
         body: JSON.stringify(values),
       });
-  
+
       const result = await response.json();
       console.log(result);
-  
+
       setSubmitSuccess(true);
       resetForm();
     } catch (error) {
@@ -43,19 +44,17 @@ const Formulario = () => {
   };
 
   return (
-    <div className="  bg-secondary  py-8">
+    <div className="bg-secondary py-8">
       <div className="container mx-auto p-4 sm:p-6 lg:p-8">
         <h1 className="text-5xl text-white font-bold text-center mb-6">
           Contacto
-        </h1>{" "}
-        {/* Nuevo encabezado h1 */}
+        </h1>
         <Formik
           initialValues={{
             name: "",
             email: "",
             message: "",
           }}
-          validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
@@ -127,8 +126,7 @@ const Formulario = () => {
                     isSubmitting ? "bg-gray-400 cursor-not-allowed" : ""
                   }`}
                 >
-                  {isSubmitting ? "Enviando..." : "ENVIAR"}{" "}
-                  {/* Texto en mayúsculas */}
+                  {isSubmitting ? "Enviando..." : "ENVIAR"}
                 </motion.button>
               </div>
             </Form>
