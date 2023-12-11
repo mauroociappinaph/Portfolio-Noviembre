@@ -8,15 +8,16 @@ import PadelMdq from "../asset/Proyectos/padelmdq.png";
 import CarritoCompra from "../asset/Proyectos/CarritoDeCompra.png";
 import FestivalRock from "../asset/Proyectos/FestivalRock.png";
 import Cotizador from "../asset/Proyectos/Cotizador.png";
-import PokemonApi from "../asset/Proyectos/PokemonApi.png"
-import Coffe from "../asset/Proyectos/Coffe.png"
-import Buffet from "../asset/Proyectos/Buffet.png"
+import PokemonApi from "../asset/Proyectos/PokemonApi.png";
+import Coffe from "../asset/Proyectos/Coffe.png";
+import Buffet from "../asset/Proyectos/Buffet.png";
 
 const projectsData = [
   {
     id: 4,
     title: "Deal Up!",
-    description: "Deal Up es una aplicación Full Stack para conectar emprendedores con inversionistas.",
+    description:
+      "Deal Up es una aplicación Full Stack para conectar emprendedores con inversionistas.",
     image: DealUp,
     deployedUrl: "https://start-bussines-n21ptnn46-adielhdz.vercel.app/",
     technologies: [
@@ -46,7 +47,8 @@ const projectsData = [
   {
     id: 2,
     title: "Pokedex",
-    description: "Pokedex consumiendo los datos de la API de Pokemon. Permite ver todos los pokemones y entrar a los datos específicos de cada pokemon.",
+    description:
+      "Pokedex consumiendo los datos de la API de Pokemon. Permite ver todos los pokemones y entrar a los datos específicos de cada pokemon.",
     image: PokemonApi,
     deployedUrl: "https://pokedex-typescript-reactmc.netlify.app/",
     technologies: [
@@ -60,7 +62,8 @@ const projectsData = [
   {
     id: 3,
     title: "Cotizador de monedas",
-    description: "Cotizador de conversión de monedas.Permite calcular el timpo de cambio entre dos tipos de monedas.",
+    description:
+      "Cotizador de conversión de monedas.Permite calcular el timpo de cambio entre dos tipos de monedas.",
     image: Cotizador,
     deployedUrl: "https://cotizadorbymauroociappina.netlify.app/",
     technologies: [
@@ -73,7 +76,8 @@ const projectsData = [
   {
     id: 5,
     title: "Carrito de compra",
-    description: "Una aplicación web que simula un carrito de compras, permitiendo a los usuarios agregar productos y eliminar productos.",
+    description:
+      "Una aplicación web que simula un carrito de compras, permitiendo a los usuarios agregar productos y eliminar productos.",
     image: CarritoCompra,
     deployedUrl: "https://carritodecompraciappina.netlify.app/",
     technologies: [
@@ -85,7 +89,8 @@ const projectsData = [
   {
     id: 6,
     title: "Festival Rock",
-    description: "Esta aplicación web dedicada a un festival musical. Contiene un Line-up, horarios de concierto y una galeria interactiva de fotos.",
+    description:
+      "Esta aplicación web dedicada a un festival musical. Contiene un Line-up, horarios de concierto y una galeria interactiva de fotos.",
     image: FestivalRock,
     deployedUrl: "https://rockfestivalmdp2022.netlify.app/",
     technologies: [
@@ -99,27 +104,28 @@ const projectsData = [
   {
     id: 7,
     title: "Buffet",
-    description: "Aplicación web de un restaurante. Contiene menu, fotos y descripción de los productos.",
+    description:
+      "Aplicación web de un restaurante. Contiene menu, fotos y descripción de los productos.",
     image: Buffet,
     deployedUrl: "",
     technologies: [
       { name: "HTML", color: "bg-rose-400 text-rose-900" },
       { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
-    ]
+    ],
   },
   {
     id: 8,
     title: "Coffe Shop",
-    description: "",
+    description: "Aplicación web de una cafeteria. Contiene menu, fotos, pagina Sobre nosotros, descripción de los productos y formulario de contacto.",
     image: Coffe,
     deployedUrl: "https://blogcafeciappina.netlify.app/",
     technologies: [
       { name: "HTML", color: "bg-rose-400 text-rose-900" },
       { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
-    ]
-  }
+    ],
+  },
 ];
 
 const Proyectos = () => {
