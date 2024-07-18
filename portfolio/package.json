@@ -13,6 +13,8 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.16",
+    "axios": "^1.7.2",
+    "classnames": "^2.5.1",
     "formik": "^2.4.6",
     "framer-motion": "^10.16.4",
     "postcss": "^8.4.31",
@@ -32,7 +34,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
