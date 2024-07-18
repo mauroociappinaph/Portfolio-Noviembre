@@ -11,6 +11,7 @@ import Cotizador from "../asset/Proyectos/Cotizador.png";
 import PokemonApi from "../asset/Proyectos/PokemonApi.png";
 import Coffe from "../asset/Proyectos/Coffe.png";
 import Buffet from "../asset/Proyectos/Buffet.png";
+import HowsAdvisor from "../asset/Proyectos/HowsAdvisor.png";
 
 const projectsData = [
   {
@@ -34,7 +35,7 @@ const projectsData = [
 id: 9,
 title: "Hows Advisor ",
 description: "Sitio Web de una empresa venta de trades y servicios de consultoría.Que contiene pasarela de pago aplicada con Stripe.",
-image: Buffet,
+image: HowsAdvisor,
 deployedUrl: "",
 technologies: [
   { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
