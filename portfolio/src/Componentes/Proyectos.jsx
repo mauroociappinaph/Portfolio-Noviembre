@@ -31,6 +31,24 @@ const projectsData = [
     ],
   },
   {
+id: 9,
+title: "Hows Advisor ",
+description: "Sitio Web de una empresa venta de trades y servicios de consultoría.Que contiene pasarela de pago aplicada con Stripe.",
+image: Buffet,
+deployedUrl: "",
+technologies: [
+  { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
+  { name: "Sequelize", color: "bg-lime-400 text-lime-900" },
+  { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
+  { name: "TypeScript", color: "bg-rose-400 text-rose-900" },
+  { name: "Postman", color: "bg-yellow-400 text-fuchsia-900" },
+  { name: "Node JS", color: "bg-green-400 text-green-900" },
+  { name: "Express", color: "bg-blue-400 text-blue-900" },
+  {name: "Stripe", color: "bg-blue-400 text-blue-900"}
+],
+
+  },
+  {
     id: 1,
     title: "Padel MDQ",
     description:
@@ -126,6 +144,7 @@ const projectsData = [
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
     ],
   },
+
 ];
 
 const Proyectos = () => {

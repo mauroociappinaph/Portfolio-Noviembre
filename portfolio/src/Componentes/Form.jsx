@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 //!SECTION Validación Form con YUP
-
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("El nombre es obligatorio"),
   email: Yup.string()
@@ -13,10 +12,7 @@ const validationSchema = Yup.object().shape({
   message: Yup.string().required("El mensaje es obligatorio"),
 });
 
-
-
 const Formulario = () => {
-  const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
@@ -55,6 +51,7 @@ const Formulario = () => {
             email: "",
             message: "",
           }}
+          validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
           {({ isSubmitting }) => (
