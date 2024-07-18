@@ -35,21 +35,18 @@ const Hero = () => {
                 >
                   <FaGithub size={40} />
                 </a>
-                <a
-                  href="https://twitter.com/mauroo_jose"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white"
-                >
-                  <FaTwitter size={40} />
-                </a>
               </div>
             </div>
           </div>
 
           {/* Aquí se agrega la imagen a la derecha */}
           <div className="w-full lg:w-1/2 flex justify-center items-center">
-            <img rel="preload" src={img1} alt="Home" className="w-full lg:w-3/4" />
+            <img
+              rel="preload"
+              src={img1}
+              alt="Home"
+              className="w-full lg:w-3/4"
+            />
           </div>
         </div>
       </div>
