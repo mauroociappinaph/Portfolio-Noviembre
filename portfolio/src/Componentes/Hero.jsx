@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="lg:flex lg:items-center lg:justify-between flex-wrap">
           <div className="w-full lg:w-1/2 min-w-0 mb-6 lg:mb-0">
             <div className="mb-4">
-              <div className="text-white text-4xl  sm:text-5xl md:text-6xl">
+              <div className="text-white text-4xl sm:text-5xl md:text-6xl">
                 Mauro José <br />
                 <span className="font-extrabold text-7xl">Ciappina</span>
               </div>
