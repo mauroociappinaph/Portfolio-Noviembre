@@ -1,9 +1,9 @@
 import Logo from "../../src/asset/logo/Logo.png";
-import { FaRegClock } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 
 const Nav = () => {
   const [time, setTime] = useState(new Date());
+  const [is24Hour] = useState(true); // Removed toggle functionality
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -15,54 +15,27 @@ const Nav = () => {
     };
   }, []);
 
-  const days = [
-    "Domingo",
-    "Lunes",
-    "Martes",
-    "Miércoles",
-    "Jueves",
-    "Viernes",
-    "Sábado",
-  ];
-  const months = [
-    "Enero",
-    "Febrero",
-    "Marzo",
-    "Abril",
-    "Mayo",
-    "Junio",
-    "Julio",
-    "Agosto",
-    "Septiembre",
-    "Octubre",
-    "Noviembre",
-    "Diciembre",
-  ];
+  const formattedTime = is24Hour
+    ? time.toLocaleTimeString("es-ES", { hour: '2-digit', minute: '2-digit', hour12: false })
+    : time.toLocaleTimeString("es-ES", { hour: '2-digit', minute: '2-digit', hour12: true });
+
+  const formattedDate = time.toLocaleDateString("es-ES", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
   return (
-    <nav className="flex items-center justify-around p-4 bg-primary">
+    <nav className="flex items-center justify-around p-4 bg-primary text-white">
       <div className="flex items-center">
         {Logo && (
           <img src={Logo} alt="Logo" className="w-16 h-16 mr-4 rounded-full" />
         )}
       </div>
-      <div
-        className="text-white text-lg"
-        style={{ fontFamily: "Arial, sans-serif", fontSize: "18px" }}
-      >
-        <p>
-          {days[time.getDay()]} {time.getDate().toString().padStart(2, "0")} de{" "}
-          {months[time.getMonth()]} de {time.getFullYear()}
-        </p>
-      </div>
-      <div
-        className="text-white text-lg"
-        style={{ fontFamily: "Arial, sans-serif", fontSize: "18px" }}
-      >
-        <p>
-          {time.getHours().toString().padStart(2, "0")}:
-          {time.getMinutes().toString().padStart(2, "0")}
-        </p>
+      <div className="flex flex-col items-center">
+        <div className="text-4xl font-bold">{formattedTime}</div>
+        <div className="text-lg">{formattedDate}</div>
       </div>
     </nav>
   );
