@@ -1,24 +1,16 @@
-import AboutMe from "./Componentes/AboutMe";
-import Hero from "./Componentes/Hero";
-import Proyectos from "./Componentes/Proyectos";
-import Footer from "./Componentes/Footer";
-import SoftSkills from "./Componentes/SoftSkills";
-import Form from "./Componentes/Form";
-import Nav from "./Componentes/Nav";
-import Technologies from "./Componentes/Tecnologias";
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Landing from './Landing';
+import Home from '../src/Componentes/Home';
 
 function App() {
   return (
-    <>
-      <Nav />
-      <Hero />
-      <AboutMe />
-      <SoftSkills />
-      <Technologies />
-      <Proyectos />
-      <Form />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/landing" element={<Landing />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 

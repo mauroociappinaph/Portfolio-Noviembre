@@ -30,12 +30,16 @@ const Nav = () => {
     <nav className="flex items-center justify-around p-4 bg-primary text-white">
       <div className="flex items-center">
         {Logo && (
-          <img src={Logo} alt="Logo" className="w-16 h-16 mr-4 rounded-full" />
+          <img src={Logo} alt="Logo de la empresa X" className="w-20 h-20 mr-4 rounded-full" />
         )}
       </div>
       <div className="flex flex-col items-center">
-        <div className="text-4xl font-bold">{formattedTime}</div>
-        <div className="text-lg">{formattedDate}</div>
+        <time className="text-4xl font-bold transition duration-500 ease-in-out" dateTime={time.toISOString()} aria-live="polite">
+          {formattedTime}
+        </time>
+        <time className="text-lg" dateTime={time.toISOString().split('T')[0]}>
+          {formattedDate}
+        </time>
       </div>
     </nav>
   );

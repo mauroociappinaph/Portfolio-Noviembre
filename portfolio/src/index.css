@@ -3,12 +3,7 @@
 @import 'tailwindcss/utilities';
 
 html {
-  margin: 0;
-  background-image: url('../src/asset/BackGround.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+ 
   scroll-behavior: smooth;
 }
  
@@ -19,5 +14,7 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+
+
 
 
