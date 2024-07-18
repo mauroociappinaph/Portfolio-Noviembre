@@ -85,7 +85,7 @@ technologies: [
     image: Cotizador,
     deployedUrl: "https://cotizadorbymauroociappina.netlify.app/",
     technologies: [
-      { name: "Vue Js", color: "bg-rose-400 text-rose-900" },
+      { name: "Vue.js", color: "bg-rose-400 text-rose-900" },
       { name: "Vite", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
       { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
