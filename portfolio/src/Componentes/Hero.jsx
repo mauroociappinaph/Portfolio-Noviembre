@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import img1 from "../asset/vecteezy_3d-male-character-engaged-in-work-on-a-laptop_24658981_575.png";
 
 const Hero = () => {
@@ -34,6 +34,12 @@ const Hero = () => {
                   className="text-white"
                 >
                   <FaGithub size={40} />
+                </a>
+                <a
+                  href="mailto:ciappinamaurooj@gmail.com"
+                  className="text-white"
+                >
+                  <FaEnvelope size={40} />
                 </a>
               </div>
             </div>
