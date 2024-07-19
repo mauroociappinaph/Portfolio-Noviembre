@@ -33,22 +33,22 @@ const projectsData = [
     ],
   },
   {
-id: 9,
-title: "Hows Advisor ",
-description: "Sitio Web de una empresa venta de trades y servicios de consultoría.Que contiene pasarela de pago aplicada con Stripe.",
-image: HowsAdvisor,
-deployedUrl: "",
-technologies: [
-  { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
-  { name: "Sequelize", color: "bg-lime-400 text-lime-900" },
-  { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
-  { name: "TypeScript", color: "bg-rose-400 text-rose-900" },
-  { name: "Postman", color: "bg-yellow-400 text-fuchsia-900" },
-  { name: "Node JS", color: "bg-green-400 text-green-900" },
-  { name: "Express", color: "bg-blue-400 text-blue-900" },
-  {name: "Stripe", color: "bg-blue-400 text-blue-900"}
-],
-
+    id: 9,
+    title: "Hows Advisor ",
+    description:
+      "Sitio Web de una empresa venta de trades y servicios de consultoría.Que contiene pasarela de pago aplicada con Stripe.",
+    image: HowsAdvisor,
+    deployedUrl: "",
+    technologies: [
+      { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "Sequelize", color: "bg-lime-400 text-lime-900" },
+      { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
+      { name: "TypeScript", color: "bg-rose-400 text-rose-900" },
+      { name: "Postman", color: "bg-yellow-400 text-fuchsia-900" },
+      { name: "Node JS", color: "bg-green-400 text-green-900" },
+      { name: "Express", color: "bg-blue-400 text-blue-900" },
+      { name: "Stripe", color: "bg-blue-400 text-blue-900" },
+    ],
   },
   {
     id: 1,
@@ -137,7 +137,8 @@ technologies: [
   {
     id: 8,
     title: "Coffe Shop",
-    description: "Aplicación web de una cafeteria. Contiene menu, fotos, pagina Sobre nosotros, descripción de los productos y formulario de contacto.",
+    description:
+      "Aplicación web de una cafeteria. Contiene menu, fotos, pagina Sobre nosotros, descripción de los productos y formulario de contacto.",
     image: Coffe,
     deployedUrl: "https://blogcafeciappina.netlify.app/",
     technologies: [
@@ -145,13 +146,13 @@ technologies: [
       { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
     ],
-
   },
   {
     id: 9,
     title: "Packar",
-    description: "Aplicación web de logística. Contiene menu, fotos, descripción de los productos y formulario de contacto.",
-  image: Packar,
+    description:
+      "Aplicación web de logística. Contiene menu, fotos, descripción de los productos y formulario de contacto.",
+    image: Packar,
     deployedUrl: "https://packar-it.vercel.app/",
     technologies: [
       { name: "Next JS", color: "bg-rose-400 text-rose-900" },
@@ -159,28 +160,16 @@ technologies: [
       { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
       { name: "TypeScript", color: "bg-lime-400 text-lime-900" },
       { name: "Vercel", color: "bg-orange-400 text-orange-900" },
-      {name:"Node JS" , color:"bg-sky-400 text-sky-900"},
-      {name:"Express" , color:"bg-blue-400 text-blue-900"},
-      
-
+      { name: "Node JS", color: "bg-sky-400 text-sky-900" },
+      { name: "Express", color: "bg-blue-400 text-blue-900" },
     ],
-  }
-
+  },
 ];
 
 const Proyectos = () => {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 relative">
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            "url('https://tenor.com/view/earth-planet-globe-environment-black-and-white-gif-5533046')",
-          backgroundSize: "cover",
-          filter: "grayscale(100%)",
-          opacity: 0.6,
-        }}
-      ></div>
+      <div className="absolute inset-0 z-0"></div>
       <div className="container mx-auto grid gap-8 px-4 md:px-6 relative z-10">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
@@ -221,7 +210,10 @@ const Proyectos = () => {
               </div>
               <div className=" bottom-0 left-0 right-0 bg-primary text-white p-4 flex flex-wrap gap-2 justify-center">
                 {project.technologies.map((tech, index) => (
-                  <div key={index} className={`flex items-center gap-2 ${tech.color}`}>
+                  <div
+                    key={index}
+                    className={`flex items-center gap-2 ${tech.color}`}
+                  >
                     <div className="flex items-center rounded-md px-2 py-1 text-xs font-semibold">
                       {tech.name}
                     </div>
