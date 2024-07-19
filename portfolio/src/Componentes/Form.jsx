@@ -17,9 +17,10 @@ const Formulario = () => {
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
+      console.log("Submitting form...");
       setSubmitting(true);
 
-      const response = await fetch("http://localhost:3001/enviar-correo", {
+      const response = await fetch("https://formspree.io/f/mqazarvb}", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,15 +28,18 @@ const Formulario = () => {
         body: JSON.stringify(values),
       });
 
-      const result = await response.json();
-      console.log(result);
-
-      setSubmitSuccess(true);
-      resetForm();
+      if (response.ok) {
+        console.log("Form submitted successfully");
+        setSubmitSuccess(true);
+        resetForm();
+      } else {
+        throw new Error("Error al enviar el formulario");
+      }
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
     } finally {
       setSubmitting(false);
+      console.log("Form submission complete");
     }
   };
 
