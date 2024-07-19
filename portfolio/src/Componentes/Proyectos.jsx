@@ -170,7 +170,7 @@ technologies: [
 
 const Proyectos = () => {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary relative">
+    <section className="w-full py-12 md:py-24 lg:py-32 relative">
       <div
         className="absolute inset-0 z-0"
         style={{

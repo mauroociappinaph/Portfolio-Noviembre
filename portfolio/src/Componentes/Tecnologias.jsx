@@ -22,7 +22,7 @@ const TechnologyItem = React.memo(({ tech }) => {
     <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105">
       <div className="p-6">
         <div className="flex items-center gap-4 mb-4">
-          <div className="bg-primary rounded-md p-3 flex items-center justify-center">
+          <div className= "rounded-md p-3 flex items-center justify-center">
             {React.cloneElement(tech.icon, { className: "text-white" })}
           </div>
           <h3 className="text-xl font-semibold text-primary-foreground">{tech.name}</h3>
