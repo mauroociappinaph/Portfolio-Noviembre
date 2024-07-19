@@ -1,6 +1,8 @@
 // Hace un componente que sea un slice con logos de las marcas con la que he trabajado. Que los logos se muevan de izquierda a derecha y sean de un color gris.
 
 //Anima los logos en este componente
+
+/*
 import React, { useState, useEffect } from "react";
 
 const Clientes = () => {
@@ -38,3 +40,4 @@ const Clientes = () => {
 };
 
 export default Clientes;
+*/
