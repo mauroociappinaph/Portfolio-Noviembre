@@ -144,7 +144,26 @@ technologies: [
       { name: "CSS", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "JavaScript", color: "bg-lime-400 text-lime-900" },
     ],
+
   },
+  {
+    id: 9,
+    title: "Packar",
+    description: "Aplicación web de logística. Contiene menu, fotos, descripción de los productos y formulario de contacto.",
+  image: "",
+    deployedUrl: "https://packar-it.vercel.app/",
+    technologies: [
+      { name: "Next JS", color: "bg-rose-400 text-rose-900" },
+      { name: "MongoDB", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
+      { name: "TypeScript", color: "bg-lime-400 text-lime-900" },
+      { name: "Vercel", color: "bg-orange-400 text-orange-900" },
+      {name:"Node JS" , color:"bg-sky-400 text-sky-900"},
+      {name:"Express" , color:"bg-blue-400 text-blue-900"},
+      
+
+    ],
+  }
 
 ];
 
