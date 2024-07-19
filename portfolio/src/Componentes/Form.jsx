@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import axios from "axios";
 
 //!SECTION Validación Form con YUP
 const validationSchema = Yup.object().shape({
@@ -13,36 +13,32 @@ const validationSchema = Yup.object().shape({
 });
 
 const Formulario = () => {
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
-      console.log("Submitting form...");
-      setSubmitting(true);
-
-      const response = await fetch("https://formspree.io/f/mqazarvb}", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(values),
-      });
-
-      if (response.ok) {
-        console.log("Form submitted successfully");
-        setSubmitSuccess(true);
-        resetForm();
-      } else {
-        throw new Error("Error al enviar el formulario");
+      if (!values || !setSubmitting || !resetForm) {
+        throw new Error("Missing required parameters");
       }
+
+      console.log("Submitting form...");
+
+      const response = await axios.post(
+        "https://formspree.io/f/mqazarvb",
+        values
+      );
+      console.log(response);
+      console.log("Form submitted successfully");
+      alert("Formulario enviado correctamente");
+      resetForm(); // Limpia los campos del formulario
     } catch (error) {
       console.error("Error al enviar el formulario:", error);
+      alert("Error al enviar el formulario");
     } finally {
-      setSubmitting(false);
+      if (setSubmitting) {
+        setSubmitting(false);
+      }
       console.log("Form submission complete");
     }
   };
-
   return (
     <div className="bg-secondary py-8">
       <div className="container mx-auto p-4 sm:p-6 lg:p-8">
