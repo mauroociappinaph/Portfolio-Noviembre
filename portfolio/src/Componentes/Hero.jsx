@@ -42,6 +42,17 @@ const Hero = () => {
                   <FaEnvelope size={40} />
                 </a>
               </div>
+              {/* Aquí se agrega el CTA */}
+              <div className="mt-8 flex align-center ">
+                <a
+                  href="https://calendly.com/event_types/158634324/edit?return_to=%2Fevent_types%2Fuser%2Fme" // Reemplaza con tu enlace de Calendly
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-md bg-white px-6 py-3 text-base font-medium text-primary shadow-sm transition-colors hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                >
+                  Agendar una Reunión
+                </a>
+              </div>
             </div>
           </div>
 
