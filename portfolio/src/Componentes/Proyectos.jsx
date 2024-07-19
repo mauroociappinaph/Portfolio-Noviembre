@@ -150,8 +150,7 @@ technologies: [
 
 const Proyectos = () => {
   return (
-    <div className=" py-16 px-4 sm:px-6 lg:px-8 relative  bg-secondary  ">
-      {/* Agregar fondo semi-transparente */}
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary relative">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -162,11 +161,13 @@ const Proyectos = () => {
           opacity: 0.6,
         }}
       ></div>
-      <div className="max-w-screen-xl mx-auto relative z-10">
-        <h1 className="text-white text-5xl sm:text-4xl md:text-5xl font-bold text-center">
-          Proyectos
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+      <div className="container mx-auto grid gap-8 px-4 md:px-6 relative z-10">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
+            Mis Proyectos
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((project) => (
             <motion.div
               key={project.id}
@@ -175,44 +176,43 @@ const Proyectos = () => {
                 boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
                 margin: "8px",
               }}
-              className="bg-white p-4 rounded shadow-md"
+              className="relative group overflow-hidden rounded-lg bg-white shadow-md"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-32 object-cover rounded mb-2"
+                className="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
               />
-              <h2 className="text-lg font-semibold">{project.title}</h2>
-              <p className="text-gray-700">
-                {project.description}
-                <a
-                  href={project.deployedUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-500 underline block mt-2"
-                >
-                  {project.deployedUrl}
-                </a>
-
-                {/* Agregar el div con las tecnologías */}
-                <div className="grid grid-cols-4 mt-4 items-center justify-center gap-4">
-                  {project.technologies.map((technology, index) => (
-                    <div
-                      key={index}
-                      className={`flex items-center gap-2 ${technology.color}`}
+              <div className="absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 flex items-center justify-center">
+                <div className="text-white text-center space-y-2 p-4">
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <p className="text-sm">
+                    {project.description}
+                    <a
+                      href={project.deployedUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white font-bold no-underline block mt-2"
                     >
-                      <div className="flex items-center rounded-md px-2 py-1 text-xs font-semibold">
-                        {technology.name}
-                      </div>
-                    </div>
-                  ))}
+                      {project.deployedUrl}
+                    </a>
+                  </p>
                 </div>
-              </p>
+              </div>
+              <div className=" bottom-0 left-0 right-0 bg-primary text-white p-4 flex flex-wrap gap-2 justify-center">
+                {project.technologies.map((tech, index) => (
+                  <div key={index} className={`flex items-center gap-2 ${tech.color}`}>
+                    <div className="flex items-center rounded-md px-2 py-1 text-xs font-semibold">
+                      {tech.name}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
