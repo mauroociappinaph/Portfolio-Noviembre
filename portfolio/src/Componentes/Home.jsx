@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTrail, a } from '@react-spring/web';
+import Who from "../asset/Who.png";
 
 function Home() {
   const [open, setOpen] = useState(true);
@@ -15,7 +16,8 @@ function Home() {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-primary px-4">
-      <div className="space-y-6 text-center">
+      <div className=" flex flex-col items-center justify-center space-y-6 text-center">
+        <img src={Who} className='w-1/4 ' alt="Who" />
         <a.div style={trail[0]} className="text-5xl font-bold tracking-tight text-white sm:text-6xl">
           Bienvenido a mi portafolio
         </a.div>

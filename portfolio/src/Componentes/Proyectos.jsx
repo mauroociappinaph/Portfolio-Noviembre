@@ -12,6 +12,7 @@ import PokemonApi from "../asset/Proyectos/PokemonApi.png";
 import Coffe from "../asset/Proyectos/Coffe.png";
 import Buffet from "../asset/Proyectos/Buffet.png";
 import HowsAdvisor from "../asset/Proyectos/HowsAdvisor.png";
+import Packar from "../asset/Proyectos/Packar.png";
 
 const projectsData = [
   {
@@ -150,7 +151,7 @@ technologies: [
     id: 9,
     title: "Packar",
     description: "Aplicación web de logística. Contiene menu, fotos, descripción de los productos y formulario de contacto.",
-  image: "",
+  image: Packar,
     deployedUrl: "https://packar-it.vercel.app/",
     technologies: [
       { name: "Next JS", color: "bg-rose-400 text-rose-900" },
