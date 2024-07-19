@@ -36,7 +36,7 @@ const projectsData = [
     id: 9,
     title: "Hows Advisor ",
     description:
-      "Sitio Web de una empresa venta de trades y servicios de consultoría.Que contiene pasarela de pago aplicada con Stripe.",
+      "Sitio Web de una empresa venta de trades y servicios de consultoría. Que contiene pasarela de pago aplicada con Stripe.",
     image: HowsAdvisor,
     deployedUrl: "",
     technologies: [
