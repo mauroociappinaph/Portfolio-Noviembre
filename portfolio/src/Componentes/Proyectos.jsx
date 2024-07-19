@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useState , useEffect } from "react";
+import PropTypes from "prop-types";
 
-//import PokemonApi from "../asset/Proyectos/ApiPokemon.png";
-//import Cotizador from "../asset/Proyectos/Cotizador.png";
 import DealUp from "../asset/Proyectos/DealUp.png";
 import PadelMdq from "../asset/Proyectos/padelmdq.png";
 import CarritoCompra from "../asset/Proyectos/CarritoDeCompra.png";
@@ -41,13 +41,14 @@ const projectsData = [
     deployedUrl: "",
     technologies: [
       { name: "React", color: "bg-fuchsia-400 text-fuchsia-900" },
+      { name: "Zustand", color: "bg-pink-400 text-fuchsia-900" },
       { name: "Sequelize", color: "bg-lime-400 text-lime-900" },
       { name: "Tailwind", color: "bg-sky-400 text-sky-900" },
       { name: "TypeScript", color: "bg-rose-400 text-rose-900" },
       { name: "Postman", color: "bg-yellow-400 text-fuchsia-900" },
       { name: "Node JS", color: "bg-green-400 text-green-900" },
       { name: "Express", color: "bg-blue-400 text-blue-900" },
-      { name: "Stripe", color: "bg-blue-400 text-blue-900" },
+      { name: "Stripe", color: "bg-blue-600 text-blue-900" },
     ],
   },
   {
@@ -148,7 +149,7 @@ const projectsData = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "Packar",
     description:
       "Aplicación web de logística. Contiene menu, fotos, descripción de los productos y formulario de contacto.",
@@ -166,9 +167,33 @@ const projectsData = [
   },
 ];
 
-const Proyectos = () => {
+export default function Proyectos() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [noResults, setNoResults] = useState(false);
+  
+  // Definir filteredProjects aquí
+  const [filteredProjects, setFilteredProjects] = useState([]);
+
+  const handleSearch = (event) => {
+    setSearchTerm(event?.target?.value || "");
+  };
+
+  useEffect(() => {
+    const filtered = projectsData
+      .filter((project) => project?.technologies)
+      .filter((project) =>
+        project?.technologies?.some((tech) =>
+          tech?.name?.toLowerCase()?.includes(searchTerm?.toLowerCase())
+        )
+      );
+    
+    setFilteredProjects(filtered);
+    setNoResults(filtered.length === 0);
+  }, [searchTerm]);
+
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 relative">
+      
       <div className="absolute inset-0 z-0"></div>
       <div className="container mx-auto grid gap-8 px-4 md:px-6 relative z-10">
         <div className="text-center">
@@ -176,56 +201,91 @@ const Proyectos = () => {
             Mis Proyectos
           </h2>
         </div>
+      
+        <div className="text-center">
+          <input
+            type="text"
+            placeholder="Busca por tecnología"
+            value={searchTerm}
+            onChange={handleSearch}
+            className="p-2 rounded border border-gray-300"
+          />
+        </div>
+        {noResults && <p className="text-center bg-red-500 text-white p-4">Tecnología no encontrada</p>}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projectsData.map((project) => (
-            <motion.div
-              key={project.id}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                margin: "8px",
-              }}
-              className="relative group overflow-hidden rounded-lg bg-white shadow-md"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 flex items-center justify-center">
-                <div className="text-white text-center space-y-2 p-4">
-                  <h3 className="text-xl font-bold">{project.title}</h3>
-                  <p className="text-sm">
-                    {project.description}
-                    <a
-                      href={project.deployedUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white font-bold no-underline block mt-2"
-                    >
-                      {project.deployedUrl}
-                    </a>
-                  </p>
-                </div>
-              </div>
-              <div className=" bottom-0 left-0 right-0 bg-primary text-white p-4 flex flex-wrap gap-2 justify-center">
-                {project.technologies.map((tech, index) => (
-                  <div
-                    key={index}
-                    className={`flex items-center gap-2 ${tech.color}`}
-                  >
-                    <div className="flex items-center rounded-md px-2 py-1 text-xs font-semibold">
-                      {tech.name}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+          {filteredProjects?.map((project) => (
+            <ProjectCard key={project?.id} project={project} />
           ))}
         </div>
       </div>
     </section>
   );
+}
+
+const ProjectCard = ({ project }) => {
+  return (
+    <motion.div
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        margin: "8px",
+      }}
+      className="relative group overflow-hidden rounded-lg bg-white shadow-md"
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-primary/90 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 flex items-center justify-center">
+        <div className="text-white text-center space-y-2 p-4">
+          <h3 className="text-xl font-bold">{project.title}</h3>
+          <p className="text-sm">
+            {project.description}
+            {project.deployedUrl && (
+              <a
+                href={project.deployedUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-bold no-underline block mt-2"
+              >
+                {project.deployedUrl}
+              </a>
+            )}
+          </p>
+        </div>
+      </div>
+      <div className=" bottom-0 left-0 right-0 bg-primary text-white p-4 flex flex-wrap gap-2 justify-center">
+        {project.technologies.map((tech, index) => (
+          <div
+            key={index}
+            className={`flex items-center gap-2 ${tech.color}`}
+          >
+            <div className="flex items-center rounded-md px-2 py-1 text-xs font-semibold">
+              {tech.name}
+            </div>
+          </div>
+        ))}
+      </div>
+    </motion.div>
+  );
 };
 
-export default Proyectos;
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    deployedUrl: PropTypes.string,
+    technologies: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        color: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+  }).isRequired,
+};
+
+
+
