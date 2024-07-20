@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTrail, a } from '@react-spring/web';
 import Who from "../asset/Who.png";
+import { useDispatch } from 'react-redux';
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(true);
   const [name, setName] = useState('');
+  const dispatch = useDispatch();
+  
   const [inputValue, setInputValue] = useState('');
 
   const trail = useTrail(2, {
@@ -18,13 +21,17 @@ function Home() {
 
   const handleNameChange = (e) => setInputValue(e.target.value);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setName(inputValue);
-    setInputValue('');
-    setIsModalOpen(false);
-  };
-
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (inputValue.trim() === '') {
+    alert('El nombre no puede estar vacío');
+    return;
+  }
+  setName(inputValue);
+  setInputValue('');
+  setIsModalOpen(false);
+  dispatch({ type: 'SET_NAME', payload: inputValue });
+};
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-primary px-4">
       {isModalOpen && (

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useState , useEffect } from "react";
 import PropTypes from "prop-types";
-
+import { FaGithub } from "react-icons/fa";
 import DealUp from "../asset/Proyectos/DealUp.png";
 import PadelMdq from "../asset/Proyectos/padelmdq.png";
 import CarritoCompra from "../asset/Proyectos/CarritoDeCompra.png";
@@ -22,6 +22,7 @@ const projectsData = [
       "Deal Up es una aplicación Full Stack para conectar emprendedores con inversionistas.",
     image: DealUp,
     deployedUrl: "https://start-bussines-n21ptnn46-adielhdz.vercel.app/",
+    gitHubUrl: "https://github.com/AdielHdz/StartBussines",
     technologies: [
       { name: "NextJS", color: "bg-fuchsia-400 text-fuchsia-900" },
       { name: "Sequelize", color: "bg-lime-400 text-lime-900" },
@@ -171,7 +172,6 @@ export default function Proyectos() {
   const [searchTerm, setSearchTerm] = useState("");
   const [noResults, setNoResults] = useState(false);
   
-  // Definir filteredProjects aquí
   const [filteredProjects, setFilteredProjects] = useState([]);
 
   const handleSearch = (event) => {
@@ -181,19 +181,21 @@ export default function Proyectos() {
   useEffect(() => {
     const filtered = projectsData
       .filter((project) => project?.technologies)
-      .filter((project) =>
-        project?.technologies?.some((tech) =>
-          tech?.name?.toLowerCase()?.includes(searchTerm?.toLowerCase())
-        )
-      );
-    
+      .filter((project) => {
+        const techLower = searchTerm.toLowerCase();
+        return (
+          project?.technologies?.some((tech) =>
+            tech?.name?.toLowerCase()?.includes(techLower)
+          )
+        );
+      });
+
     setFilteredProjects(filtered);
     setNoResults(filtered.length === 0);
   }, [searchTerm]);
 
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 relative">
-      
       <div className="absolute inset-0 z-0"></div>
       <div className="container mx-auto grid gap-8 px-4 md:px-6 relative z-10">
         <div className="text-center">
@@ -201,7 +203,6 @@ export default function Proyectos() {
             Mis Proyectos
           </h2>
         </div>
-      
         <div className="text-center">
           <input
             type="text"
@@ -211,9 +212,13 @@ export default function Proyectos() {
             className="p-2 rounded border border-gray-300"
           />
         </div>
-        {noResults && <p className="text-center bg-red-500 text-white p-4">Tecnología no encontrada</p>}
+        {noResults && (
+          <p className="text-center bg-red-500 text-white p-4">
+            Tecnología no encontrada
+          </p>
+        )}
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredProjects?.map((project) => (
+          {filteredProjects.map((project) => (
             <ProjectCard key={project?.id} project={project} />
           ))}
         </div>
@@ -252,10 +257,19 @@ const ProjectCard = ({ project }) => {
                 {project.deployedUrl}
               </a>
             )}
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub size={24} />
+              </a>
+            )}
           </p>
         </div>
       </div>
-      <div className=" bottom-0 left-0 right-0 bg-primary text-white p-4 flex flex-wrap gap-2 justify-center">
+      <div className="bottom-0 left-0 right-0 bg-primary text-white p-4 flex flex-wrap gap-2 justify-center">
         {project.technologies.map((tech, index) => (
           <div
             key={index}
@@ -286,6 +300,3 @@ ProjectCard.propTypes = {
     ).isRequired,
   }).isRequired,
 };
-
-
-

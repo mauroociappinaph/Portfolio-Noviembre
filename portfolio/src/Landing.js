@@ -8,6 +8,8 @@ import SoftSkills from "./Componentes/SoftSkills";
 import Form from "./Componentes/Form";
 import Nav from "./Componentes/Nav";
 import Technologies from "./Componentes/Tecnologias";
+import TicTacToe from "./Componentes/TicTacToe";
+import Help from "./Componentes/Help";
 
 function Landing() {
   return (
@@ -35,8 +37,10 @@ function Landing() {
       <Hero id="hero" />
       <AboutMe id="about-me" />
       <SoftSkills id="soft-skills" />
+      <Help id="help"/>
       <Technologies id="technologies" />
       <Proyectos id="projects" />
+      {/* <TicTacToe  id="tic-tac-toe"/> */}
       <Form id="contact" />
       <Footer />
     </>
