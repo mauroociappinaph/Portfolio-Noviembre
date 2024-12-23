@@ -15,7 +15,11 @@ export default function Help() {
               ¿En qué te puedo ayudar?
             </h2>
             <h5 className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed text-white">
-              En potenciar tu <span className="text-muted-foreground">Startup, negocio o empresa.</span></h5>
+              En potenciar tu{" "}
+              <span className="text-muted-foreground">
+                Startup, negocio o empresa.
+              </span>
+            </h5>
           </div>
         </div>
         <div className="mx-auto grid max-w-5xl items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-2 lg:grid-rows-2">
@@ -31,6 +35,9 @@ export default function Help() {
               el diseño y la programación hasta la gestión de bases de datos y
               la optimización para motores de búsqueda.
             </p>
+            <button className="mt-2 text-white bg-primary py-2 px-4 rounded">
+              Ver proyectos
+            </button>
           </div>
           <div className="grid gap-1">
             <div className="flex items-center gap-3">
@@ -46,6 +53,9 @@ export default function Help() {
               página esté cuidadosamente diseñado para captar la atención del
               usuario y dirigirlo hacia una acción específica.
             </p>
+            <button className="mt-2 text-white bg-primary py-2 px-4 rounded">
+              Ver proyectos
+            </button>
           </div>
           <div className="grid gap-1">
             <div className="flex items-center gap-3">
@@ -64,6 +74,9 @@ export default function Help() {
               continuo, asegurando que las soluciones se alineen perfectamente
               con las necesidades y objetivos estratégicos de tu empresa.
             </p>
+            <button className="mt-2 text-white bg-primary py-2 px-4 rounded">
+              Ver proyectos
+            </button>
           </div>
           <div className="grid gap-1">
             <div className="flex items-center gap-3">
@@ -79,6 +92,9 @@ export default function Help() {
               de la experiencia del usuario para maximizar las conversiones y la
               satisfacción del cliente
             </p>
+            <button className="mt-2 text-white bg-primary py-2 px-4 rounded">
+              Ver proyectos
+            </button>
           </div>
         </div>
       </div>
